@@ -1,0 +1,214 @@
+.bg-g-blue {
+  background-color: #1fc8db;
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.bg-g-purple  {
+  background-color: #9e21ff;
+  background-image: linear-gradient(141deg, #ed21ff 0%, #9e21ff 51%, #9e21ff 75%);
+}
+
+.bg-img-parallax {
+    background-image: url('https://images.unsplash.com/photo-1509115885002-e624537417ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    min-height: calc(85vh - 42px);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .bg-img {
+    background-image: url('https://images.unsplash.com/photo-1499828446245-3d2da44d5281?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80');
+  }
+
+  .bg-grayscale {
+    @include grayscale;
+  }
+
+.bg-video {
+    position: relative;
+    background-color: black;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    video, iframe {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      height: 300%; 
+      top: -100%;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      z-index: 1;
+    }
+  }
+  @media (pointer: coarse) and (hover: none) {
+    .bg-video {
+      background: url('https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80') black no-repeat center top scroll;
+    }
+    .bg-video video {
+      display: none;
+    }
+  }
+
+
+.overlay {
+  &:after { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:rgba(0, 0, 0, 0.3);
+    transition: all 1s ease;
+    animation-delay: 3s;
+    z-index: 0;
+  }
+  &.overlay-hover:hover {
+    cursor: zoom-in;
+    &:after { 
+      content: '';
+      background:rgba(0, 0, 0, 0.62);
+      transition: all .5s ease;
+    }
+  }
+}
+
+.overlay-shadow { box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2); }
+
+.overlay-tint {
+  z-index: 1;
+  &:before {
+    content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom, $primary, rgba(79, 0, 148, 0.482));
+  }
+}
+
+.bg-zoom {
+  animation: zoom 45s infinite;
+}
+@keyframes zoom {
+    0% { transform:scale(1,1); }
+    50% { transform:scale(1.2,1.2); }
+    100% { transform:scale(1,1); }
+}
+
+
+.ripple {
+  background-image:url(../img/hero.jpg);
+  height: 100vh;
+}
+
+
+
+
+.zoom-effect {
+  img, p {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  p { z-index: 1; }
+  &:hover {
+    img {
+      -webkit-transform: scale(1.32);
+      transform: scale(1.32);
+    }
+    p {
+      margin-left: 60px;
+      -webkit-transition: 1s ease;
+      transition: 1s ease;
+    }
+  }
+}
+
+.tint {
+  filter: 
+    brightness(100%) 
+    hue-rotate(58deg) invert(6%);
+    -webkit-filter: grayscale(0%) 
+    brightness(100%) 
+    hue-rotate(58deg) 
+  ;
+}
+
+.bg-blend-hover { 
+  background: url(https://images.unsplash.com/photo-1477927849362-0fb1e7d59ee6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80), linear-gradient(#00f,#f00); 
+  background-size: cover, 100% 100%;
+  padding-top: 46.44%;
+  background-position: 0 0, -1900px 0px;
+  background-repeat: no-repeat;
+  background-blend-mode: luminosity;
+  transition: 3s background-position linear;
+  margin: 0 auto;
+  &:hover { 
+    background-position: 0 0, 0 0;
+   }
+}
+
+
+//Button hover effect
+.bg-pop {
+  background: $pink-bright;
+  border-radius: 100px;
+  cursor: none;
+	position: relative;
+	appearance: none;
+	outline: none;
+	overflow: hidden;
+	span {
+		position: relative;
+		pointer-events: none;
+	}
+	
+	&::before {
+		--size: 0;
+		content: '';
+		position: absolute;
+		left: var(--x);
+		width: var(--size);
+		height: var(--size);
+		background: radial-gradient(circle closest-side, $mint, transparent);
+		transform: translate(-50%, -50%);
+		transition: width .2s ease, height .2s ease;
+	}
+	&:hover::before {
+		--size: 400px;
+	}
+}
+
+
+.bg-noise:after {
+  animation: grain 10s steps(10) infinite;
+  background-image: url(https://rfclipart.com/image/big/84-58-24/tv-screen-noise-black-and-white-textured-background-Download-Royalty-free-Vector-File-EPS-30727.jpg);
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.2;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
