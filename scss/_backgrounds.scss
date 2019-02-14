@@ -166,7 +166,10 @@
 	position: relative;
 	appearance: none;
 	outline: none;
-	overflow: hidden;
+  overflow: hidden;
+  &:hover {
+    opacity: .94;
+  }
 	span {
 		position: relative;
 		pointer-events: none;

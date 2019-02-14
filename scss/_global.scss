@@ -169,6 +169,9 @@ button:focus {
     position: absolute;
     top: 90px;
   }
+  &:hover {
+    opacity: .7;
+  }
 }
 .scroll_down:before {
   position: absolute;

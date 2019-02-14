@@ -195,6 +195,10 @@ button:focus {
   top: 90px;
 }
 
+.scroll_down:hover {
+  opacity: .7;
+}
+
 .scroll_down:before {
   position: absolute;
   bottom: 50px;
@@ -447,6 +451,10 @@ button:focus {
   appearance: none;
   outline: none;
   overflow: hidden;
+}
+
+.bg-pop:hover {
+  opacity: .94;
 }
 
 .bg-pop span {
