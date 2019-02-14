@@ -336,7 +336,7 @@ window.addEventListener('resize', checkScroll, false);
         TweenLite.to(cursor, 0.6, {
             ease: Elastic.easeOut.config(1, 0.4),
             scale: 1,
-            backgroundColor: 'transparent'
+            // backgroundColor: 'transparent'
         })
     });
 

@@ -11,14 +11,22 @@ body {
 
    //Pointer
    .cursor {
+     background: rgba(237, 237, 237, 0.502);
     cursor: none;
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 31px;
+    height: 31px;
     top: 70%;
     left: 50%;  
     border: 2px solid  white;
     border-radius: 50%;
+    text-align: center;
+    &::after {
+      content: '⬤';
+      color: white;
+      position: relative;
+      top: 3px;
+    }
 
   }
   .cursor-none:hover { cursor: none;}
