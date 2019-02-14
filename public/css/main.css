@@ -14,14 +14,14 @@ body {
 }
 
 .cursor {
-  background: rgba(237, 237, 237, 0.502);
+  background: transparent;
   cursor: none;
   position: fixed;
   width: 31px;
   height: 31px;
   top: 70%;
   left: 50%;
-  border: 2px solid  white;
+  border: 2px solid rgba(255, 255, 255, 0.31);
   border-radius: 50%;
   text-align: center;
 }
@@ -30,7 +30,20 @@ body {
   content: '⬤';
   color: white;
   position: relative;
-  top: 3px;
+  top: 1px;
+  font-size: 6px;
+}
+
+.cursor::before {
+  content: '';
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  top: -33%;
+  left: -33%;
+  border: 2px dotted white;
+  border-radius: 50%;
+  text-align: center;
 }
 
 .cursor-none:hover {

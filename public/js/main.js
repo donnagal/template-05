@@ -326,7 +326,7 @@ window.addEventListener('resize', checkScroll, false);
     hoverElem.on('mouseenter', function () {
         TweenLite.to(cursor, 0.1, {
             ease: Elastic.easeOut.config(1, 0.4),
-            scale: 2.9,
+            scale: 1.9,
             // backgroundColor: 'rgb(230, 230, 230)'
         })
     });
