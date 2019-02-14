@@ -100,27 +100,6 @@ $(function() {
   })(jQuery); // End of use strict
 
 
-// Scroll Down Button
-(function() {
-  'use strict';
-
-  var btnScrollDown = document.querySelector('#scroll_down');
-
-  function scrollDown() {
-    var windowCoords = document.documentElement.clientHeight;
-    (function scroll() {
-      if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 10);
-        setTimeout(scroll, 0);
-      }
-      if (window.pageYOffset > windowCoords) {
-        window.scrollTo(0, windowCoords);
-      }
-    })();
-  }
-
-  btnScrollDown.addEventListener('click', scrollDown);
-})();
 
 
 
@@ -279,12 +258,11 @@ Array.prototype.forEach.call($bgPop, function (element, index) {
         $("#beep__hover").animate({volume: 1}, 150);
         $("#my_audio").animate({volume: 0.1}, 150);
         $(this).animate({opacity: 1}, 150);
-        $(".cursor").addClass("z-10");
+ 
       }, function() {
           $("#beep__hover").animate({volume: 0}, 250);
           $("#my_audio").animate({volume: 0.4}, 150);
           $(this).animate({opacity: 1}, 150);
-          $(".cursor").removeClass("z-10");
       });
     
       $('.btn-sound').click(function() {
@@ -361,3 +339,13 @@ window.addEventListener('resize', checkScroll, false);
             backgroundColor: 'transparent'
         })
     });
+
+
+    $(".cursor-z-0").hover(
+      function () {
+        $('.cursor').removeClass('z-10');
+      },
+      function () {
+        $('.cursor').addClass('z-10');
+      }
+    );

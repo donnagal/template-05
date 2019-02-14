@@ -35,7 +35,7 @@
 
 <body id="page-top">
   
-        <div class="cursor"></div>
+        <div class="cursor z-10"></div>
 
         <div class="" id="nav">
                 <nav class="animate-add z-100">
@@ -86,32 +86,32 @@
                 <h1 class="text-white text-center lg:text-9xl">Get Wavey</h1>
             </div>
             <footer class="sm:mt-4">
-                <button type="button" class="scroll_down" id="scroll_down">
+                <a href="#1" class="scroll_down z-10">
                     <p class="text-small rotate text-white"><br>srcoll</p>
-                </button>
+                </a>
             </footer>
         </header>
 
 
-        <section id="1" class="mx-auto text-center bg-blend-hover relative">
+        <section id="1" class="cursor-z-10 mx-auto text-center bg-blend-hover relative">
                 <!-- main clip -->
                 <audio id="my_audio" src="--https://freesound.org/data/previews/159/159583_2869798-lq.mp3" loop="loop"></audio>
                 <!-- Beep :hover -->
                 <audio id="beep__hover" src="https://freesound.org/data/previews/271/271216_97763-lq.mp3"></audio>
                 <!-- Beep :active -->
                 <audio id="beep__active" src="https://freesound.org/data/previews/263/263133_2064400-lq.mp3"></audio>
-                <a class="btn-sound no-underline pt-32 absolute pin z-10 text-white text-5xl" href="#2">
+                <a class="cursor-z-10 cursor-none  btn-sound no-underline pt-32 absolute pin z-10 text-white text-5xl" href="#2">
                     <h2 class="shake shake-little shake-constant font-hand pt-32">
                      <span class="text-mint">Hover</span> to hear
                     </h2>
                 </a>
-              </section>
+        </section>
 
         <section id="2"class="p-8 bg-primary">
                 <div class="mx-auto lg:p-10">
       
                     <div class="flex flex-wrap mt-24 text-mint"  data-aos="fade-up" data-aos-duration="1000">
-                        <div class="lg:w-1/4 ml-auto pr-20">
+                        <div class="cursor-z-0  lg:w-1/4 ml-auto pr-20">
                             <p class="title-line uppsercase text-sm font-bold tracking-wide mb-10 text-bright">
                             Sub title
                             </p>
@@ -127,7 +127,7 @@
                         <div class="lg:w-2/3 mr-auto font-thin">
                             <div class="bg-mint h-32 w-1/4 p-32 absolute pin-t pin-r z-10" data-aos="fade-up" data-aos-duration="1000"></div>
                             <div class="relative overflow-hidden z-10 mt-20">
-                                <div class="zoom-effect">
+                                <div class="cursor-z-0 zoom-effect">
                                     <p class="absolute pin-b p-20 font-bold text-5xl text-bright">New Wave Sound</p>
                                     <img class="tint" src="https://images.unsplash.com/photo-1502209944943-85c1d6146367?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80t"/>
                                 </div>
@@ -143,7 +143,7 @@
         </video>
 
     <section id="3" class="text-white p-8 bg-video">
-        <div class="container mx-auto">
+        <div class="container cursor-z-10 mx-auto">
             <div class="flex-grow flex flex-col justify-center text-center">
               <div class="overlay-tint"></div>
              <iframe width="100%" height="100%"
@@ -172,7 +172,7 @@
             <div class="mx-auto lg:p-10">
   
                 <div class="flex flex-wrap mt-24 text-mint"  data-aos="fade-up" data-aos-duration="1000">
-                    <div class="lg:w-1/4 ml-auto pr-20">
+                    <div class="cursor-z-0 lg:w-1/4 ml-auto pr-20">
                         <p class="title-line uppsercase text-sm font-bold tracking-wide mb-10 text-bright">
                         Blondie
                         </p>
@@ -206,7 +206,7 @@
 
   <section id="4" class="overflow-hidden">
     <!-- Swiper -->
-    <div class="load-in swiper-container-hero bg-zoom">
+    <div class="cursor-z-10 load-in swiper-container-hero bg-zoom">
         <div class="swiper-wrapper">
                 <header class="text-white">
                         <div class="swiper-overlay-text absolute flex-grow flex flex-col justify-center pin z-10">
@@ -236,11 +236,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 
     <script src="js/main.min.js"></script>
-    <script src="js/app/scrollmagic.js"></script>
 
       <!-- ScrollMagic -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+      <script src="js/app/scrollmagic.js"></script>
+
 
         <!-- Swiper -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>

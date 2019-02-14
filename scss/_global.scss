@@ -1,8 +1,9 @@
 body { 
   @include body-font;
   overflow-x: hidden;
-  // cursor: none;
+  cursor: none;
  }
+
 
  @import 'https://csshake.surge.sh/csshake.min.css';
  @import 'https://fonts.googleapis.com/css?family=Rock+Salt';
@@ -16,12 +17,11 @@ body {
     height: 50px;
     top: 70%;
     left: 50%;  
-    border: 2px solid  $mint;
+    border: 2px solid  white;
     border-radius: 50%;
-    opacity: .5;
-    // z-index: 3;
-  }
 
+  }
+  .cursor-none:hover { cursor: none;}
 
 
  .font-hand {
@@ -146,7 +146,7 @@ button:focus {
   
 
 //Scroll Down
-button.scroll_down {
+.scroll_down {
   background-color: $primary;
   position: absolute;
   margin-left: auto;
@@ -157,8 +157,12 @@ button.scroll_down {
   bottom: 0;
   cursor: pointer;
   outline: none;
+  p {
+    position: absolute;
+    top: 90px;
+  }
 }
-button.scroll_down:before {
+.scroll_down:before {
   position: absolute;
   bottom: 50px;
   left: 50%;

@@ -9,6 +9,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  cursor: none;
 }
 
 .cursor {
@@ -18,9 +19,12 @@ body {
   height: 50px;
   top: 70%;
   left: 50%;
-  border: 2px solid #99f0e1;
+  border: 2px solid  white;
   border-radius: 50%;
-  opacity: .5;
+}
+
+.cursor-none:hover {
+  cursor: none;
 }
 
 .font-hand {
@@ -163,7 +167,7 @@ button:focus {
   padding-top: 100%;
 }
 
-button.scroll_down {
+.scroll_down {
   background-color: #4405f7;
   position: absolute;
   margin-left: auto;
@@ -176,7 +180,12 @@ button.scroll_down {
   outline: none;
 }
 
-button.scroll_down:before {
+.scroll_down p {
+  position: absolute;
+  top: 90px;
+}
+
+.scroll_down:before {
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -343,6 +352,10 @@ button.scroll_down:before {
 
 .overlay-tint {
   z-index: 1;
+}
+
+.overlay-tint:hover {
+  cursor: none;
 }
 
 .overlay-tint:before {

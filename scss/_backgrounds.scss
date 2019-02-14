@@ -84,6 +84,7 @@
 
 .overlay-tint {
   z-index: 1;
+  &:hover { cursor: none; }
   &:before {
     content: '';
       position: absolute;
