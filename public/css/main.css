@@ -400,7 +400,6 @@ button:focus {
 
 .ripple {
   background-image: url(../img/hero.jpg);
-  height: 100vh;
 }
 
 .zoom-effect img, .zoom-effect p {
@@ -521,10 +520,6 @@ button:focus {
   90% {
     transform: translate(-10%, 10%);
   }
-}
-
-.swiper-container-hero {
-  height: 100vh;
 }
 
 .swiper-pagination-images {
